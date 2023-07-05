@@ -381,5 +381,21 @@
         <Setter Property="SelectedTabColor" Value="{AppThemeBinding Light={StaticResource Gray950}, Dark={StaticResource Gray200}}" />
     </Style>
 
+    <Style TargetType="Label" x:Key="LabelKeyStyle">
+        <Setter Property="FontSize" Value="12"></Setter>
+        <Setter Property="TextColor" Value="Gray"></Setter>
+    </Style>
+
+    <Style TargetType="Label" x:Key="LabelValueStyle">
+        <Setter Property="FontSize" Value="14"></Setter>
+        <Setter Property="FontAttributes" Value="Bold"></Setter>
+        <Setter Property="TextColor" Value="#373C3F"></Setter>
+    </Style>
+
+    <Style TargetType="Label" x:Key="LabelTitleStyle">
+        <Setter Property="FontSize" Value="18"></Setter>
+        <Setter Property="FontAttributes" Value="Bold"></Setter>
+        <Setter Property="TextColor" Value="#373C3F"></Setter>
+    </Style>
 </ResourceDictionary>
 

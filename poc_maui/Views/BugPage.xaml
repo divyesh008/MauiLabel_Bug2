@@ -3,31 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="poc_maui.Views.BugPage"
              xmlns:vm="clr-namespace:poc_maui.ViewModels"
-             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              Title="BugPage">
-
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <toolkit:InvertedBoolConverter x:Key="inverseBooleanConverter" />
-            <Style TargetType="Label" x:Key="LabelKeyStyle">
-                <Setter Property="FontSize" Value="12"></Setter>
-                <Setter Property="TextColor" Value="Gray"></Setter>
-            </Style>
-
-            <Style TargetType="Label" x:Key="LabelValueStyle">
-                <Setter Property="FontSize" Value="14"></Setter>
-                <Setter Property="FontAttributes" Value="Bold"></Setter>
-                <Setter Property="TextColor" Value="#373C3F"></Setter>
-            </Style>
-
-            <Style TargetType="Label" x:Key="LabelTitleStyle">
-                <Setter Property="FontSize" Value="18"></Setter>
-                <Setter Property="FontAttributes" Value="Bold"></Setter>
-                <Setter Property="TextColor" Value="#373C3F"></Setter>
-            </Style>
-        </ResourceDictionary>
-
-    </ContentPage.Resources>
 
     <ContentPage.BindingContext>
         <vm:BugPageViewModel />
@@ -71,7 +47,7 @@
                 Grid.Row="2"
                 HeightRequest="0.3"
                 BackgroundColor="#ECECEC"/>
-
+        
         <CollectionView
                        Grid.Row="3"
                        HorizontalOptions="FillAndExpand"

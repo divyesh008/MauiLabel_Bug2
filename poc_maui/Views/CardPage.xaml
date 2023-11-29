@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:poc_maui.ViewModels"
+             x:Class="poc_maui.Views.CardPage"
+             Title="CardPage">
+
+    <ContentPage.BindingContext>
+        <vm:CardsPageViewModel />
+    </ContentPage.BindingContext>
+
+    <ScrollView HorizontalOptions="Fill" VerticalOptions="Fill" Margin="0,0,0,30">
+        <VerticalStackLayout Padding="0" Margin="25,30" Spacing="30">
+            <Grid RowDefinitions="Auto, Auto, *, Auto, Auto"
+                  ColumnDefinitions="*, *, *, *"
+                  RowSpacing="0"
+                  ColumnSpacing="{OnPlatform iOS=20,Android=0}">
+                <Image
+                   x:Name="image1"
+                   Grid.Row="0"
+                   Grid.Column="1"
+                   HeightRequest="{OnIdiom Phone=90,Tablet=210}"
+                   HorizontalOptions="Center"
+                   Margin="0,0,30,0"
+                   ZIndex="10"
+                   Source="{Binding Path=PlayerA_Card_1}"/>
+                <Image
+                   x:Name="image2"
+                   Grid.Row="0"
+                   Grid.Column="2"
+                   HeightRequest="{OnIdiom Phone=90,Tablet=210}"
+                   ZIndex="11"
+                   HorizontalOptions="Center"
+                   Margin="30,0,0,0" 
+                   Source="{Binding Path=PlayerB_Card_1}"/>
+                <Image
+                   x:Name="image3"
+                   Grid.Row="1"
+                   Grid.Column="0"
+                   Rotation="270"
+                   HeightRequest="{OnIdiom Phone=90,Tablet=210}"
+                   ZIndex="6"
+                   HorizontalOptions="Center"
+                   Source="{Binding Path=PlayerA_Card_2}"/>
+                <Image
+                   x:Name="image4"
+                   Grid.Row="1"
+                   Grid.Column="1"
+                   ZIndex="2" 
+                   Rotation="130"
+                   HeightRequest="{OnIdiom Phone=90,Tablet=210}"
+                   HorizontalOptions="Center"
+                   Source="{Binding Path=PlayerA_Shuffile_Card}"/>
+                <Image
+                   x:Name="image5"
+                   Grid.Row="1"
+                   Grid.Column="2"
+                   Rotation="230"
+                   ZIndex="3"
+                   HeightRequest="{OnIdiom Phone=90,Tablet=210}"
+                   HorizontalOptions="Center"
+                   Source="{Binding Path=PlayerB_Shuffile_Card}"/>
+                <Image
+                   x:Name="image6"
+                   Grid.Row="1"
+                   Grid.Column="3"
+                   Rotation="270"
+                   ZIndex="7"
+                   HeightRequest="{OnIdiom Phone=90,Tablet=210}"
+                   HorizontalOptions="Center"
+                   Source="{Binding Path=PlayerB_Card_2}"/>
+                <Image
+                   x:Name="image7"
+                   Grid.Row="2"
+                   Grid.Column="0"
+                   Grid.ColumnSpan="4"
+                   ZIndex="1"
+                   HeightRequest="{OnIdiom Phone=90,Tablet=210}"
+                   HorizontalOptions="Center"
+                   Source="{Binding Path=Center_Card}"/>
+                <Image
+                   x:Name="image8"
+                   Grid.Row="3"
+                   Grid.Column="0"
+                   Rotation="270"
+                   ZIndex="8"
+                   HeightRequest="{OnIdiom Phone=90,Tablet=210}"
+                   HorizontalOptions="Center"
+                   Source="{Binding Path=PlayerC_Card_1}"/>
+                <Image
+                   x:Name="image9"
+                   Grid.Row="3"
+                   Grid.Column="1"
+                   ZIndex="4" 
+                   Rotation="230"
+                   HeightRequest="{OnIdiom Phone=90,Tablet=210}"
+                   HorizontalOptions="Center"
+                   Source="{Binding Path=PlayerC_Shuffile_Card}"/>
+                <Image
+                   x:Name="image10"
+                   Grid.Row="3"
+                   Grid.Column="2"
+                   Rotation="130"
+                   ZIndex="5"
+                   HeightRequest="{OnIdiom Phone=90,Tablet=210}"
+                   HorizontalOptions="Center"
+                   Source="{Binding Path=PlayerD_Shuffile_Card}"/>
+                <Image
+                   x:Name="image11"
+                   Grid.Row="3"
+                   Grid.Column="3"
+                   Rotation="270"
+                   ZIndex="9"
+                   HeightRequest="{OnIdiom Phone=90,Tablet=210}"
+                   HorizontalOptions="Center"
+                   Source="{Binding Path=PlayerD_Card_2}"/>
+                <Image
+                   x:Name="image12"
+                   Grid.Row="4"
+                   Grid.Column="1"
+                   HeightRequest="{OnIdiom Phone=90,Tablet=210}"
+                   ZIndex="12"
+                   HorizontalOptions="Center"
+                   Margin="0,0,30,0" 
+                   Source="{Binding Path=PlayerC_Card_2}"/>
+                <Image
+                   x:Name="image13"
+                   Grid.Row="4"
+                   Grid.Column="2"
+                   HeightRequest="{OnIdiom Phone=90,Tablet=210}"
+                   ZIndex="13"
+                   HorizontalOptions="Center"
+                   Margin="30,0,0,0" 
+                   Source="{Binding Path=PlayerD_Card_1}"/>
+            </Grid>
+
+            <HorizontalStackLayout x:Name="bottomDeck" HeightRequest="{OnIdiom Phone=100,Tablet=210}">
+                <ImageButton
+                    x:Name="image14"
+                    WidthRequest="{OnIdiom Phone=90,Tablet=210}"
+                    HorizontalOptions="Center"
+                    Source="{Binding Path=New_Card_1}"/>
+                <ImageButton
+                    x:Name="image15"
+                    WidthRequest="{OnIdiom Phone=90,Tablet=210}"
+                    HorizontalOptions="Center"
+                    Source="{Binding Path=New_Card_2}"/>
+            </HorizontalStackLayout>
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+</ContentPage>

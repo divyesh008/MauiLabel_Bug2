@@ -55,6 +55,14 @@
 	  <None Remove="Views\SubViews\" />
 	  <None Remove="Sharpnado.Tabs" />
 	  <None Remove="CommunityToolkit.Maui" />
+	  <None Remove="Resources\Images\2C.svg.png" />
+	  <None Remove="Resources\Images\2D.svg.png" />
+	  <None Remove="Resources\Images\2H.svg.png" />
+	  <None Remove="Resources\Images\2S.svg.png" />
+	  <None Remove="Resources\Images\3C.svg.png" />
+	  <None Remove="Resources\Images\3D.svg.png" />
+	  <None Remove="Resources\Images\3H.svg.png" />
+	  <None Remove="Resources\Images\backside.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="ViewModels\" />

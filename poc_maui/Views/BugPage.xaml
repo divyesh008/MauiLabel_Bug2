@@ -37,11 +37,12 @@
             </StackLayout.Shadow>
         </StackLayout>
         <Label
-              Grid.Row="1"
-              Padding="10,20,0,20"
-              LineBreakMode="TailTruncation"
-              Text="Inspection"
-              Style="{StaticResource LabelTitleStyle}"/>
+            x:Name="Timer"
+            Grid.Row="1"
+            Padding="10,20,0,20"
+            LineBreakMode="TailTruncation"
+            Text="Inspection"
+            Style="{StaticResource LabelTitleStyle}"/>
 
         <BoxView
                 Grid.Row="2"
